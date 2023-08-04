@@ -1,0 +1,19 @@
+.board-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 20%;
+  margin: auto;
+  border-radius: 0;
+
+}
+
+.square{
+  background-color: white;
+  height: 100px;
+
+
+}
+
+#root {
+  margin-top: 10%;
+}
