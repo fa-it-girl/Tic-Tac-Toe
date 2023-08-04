@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Square from './Square'
 import StartAgain from './StartAgain';
+import './Square.css'
 
 export default function Board() {
   const [xIsNext, setXIsNext] = useState(true);
@@ -13,9 +14,9 @@ export default function Board() {
     }
     const nextSquares = squares.slice();
     if (xIsNext) {
-      nextSquares[i] = 'X';
+      nextSquares[i] = '🚗';
     } else {
-      nextSquares[i] = 'O';
+      nextSquares[i] = '🚙';
     }
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
@@ -26,7 +27,7 @@ export default function Board() {
   if (winner) {
     status = 'Winner: ' + winner;
   } else {
-    status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+    status = 'Next player: ' + (xIsNext ? '🚗' : '🚙');
   }
 
   const startGameAgain = () => {
@@ -35,6 +36,7 @@ export default function Board() {
 
   return (
     <>
+    <h1 className='name'>Tic-Tac-Toe</h1>
       <div className="status">{status}</div>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />

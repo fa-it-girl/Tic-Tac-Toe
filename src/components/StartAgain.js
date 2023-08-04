@@ -1,10 +1,10 @@
 import { useState } from "react";
-
+import './Square.css'
 
 const StartAgain = ({onStartHandler}) => {
 
   return (
-  <button onClick={onStartHandler}>Start again</button>
+  <button className='start-again' onClick={onStartHandler}>Start again</button>
   )
 }
 

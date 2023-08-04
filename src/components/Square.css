@@ -1,19 +1,98 @@
-.board-row{
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Caveat:wght@500&family=Changa+One:ital@0;1&family=Lato:wght@300&family=Roboto+Condensed&family=Vina+Sans&display=swap');
+
+body {
+  background-image: url('https://png.pngtree.com/background/20210711/original/pngtree-creative-cartoon-car-generation-car-rental-advertising-poster-background-material-picture-image_1120311.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Vina Sans', sans-serif;
+  width: 100vw;
+}
+
+.container {
+  text-align: center;
+}
+
+.board-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 20%;
+  /* width: 100% !important; */
+  max-width: 600px;
   margin: auto;
   border-radius: 0;
-
+  gap: 10px;
 }
 
-.square{
-  background-color: white;
-  height: 100px;
-
-
+.square {
+  background-color: transparent;
+  height: 80px;
+  gap: 10px;
+  margin-top: 10px;
+  width: 110%;
+  border-radius: 5px;
 }
 
-#root {
+
+.status {
+  text-align: center;
+  margin-bottom: 1%;
+  font-family: 'Borel', cursive;
+  font-size: 20px;
+}
+
+.start-again {
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'Borel', cursive;
+  background-color: lightblue;
+  cursor: pointer;
   margin-top: 10%;
+  width: 100%;
 }
+
+
+  .name {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Borel', cursive;
+    background-image: linear-gradient(to right, red 50%, blue 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+
+  @media screen and (max-width: 992px) {
+    body {
+      background-image: url('https://carorbis.com/wp-content/uploads/2023/03/Top-10-Cartoon-Car-Characters-to-Relive-the-Kid-in-You-2-scaled-1.jpg');
+    }
+
+    .board-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 100% !important;
+      margin: auto;
+      border-radius: 0;
+
+    }
+
+    .square {
+      height: 80px;
+      width: 80px;
+
+    }
+
+    .start-again {
+      width: 100%;}
+
+      .name{
+        font-size: 30px;
+      }
+  }
